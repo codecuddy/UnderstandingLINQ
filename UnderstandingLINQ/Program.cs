@@ -60,6 +60,24 @@ namespace UnderstandingLINQ
             }
             */
 
+            /* How to use .First and .Last
+            //var firstBMW = myCars.First(p => p.Make == "BMW");
+            //Console.WriteLine(firstBMW.VIN);
+
+            var firstBMW = myCars.OrderByDescending(p => p.Year).Last(p => p.Make == "BMW");
+            Console.WriteLine(firstBMW.VIN);
+            */
+
+            /* How to use .TrueForAll
+            Console.WriteLine(myCars.TrueForAll(p => p.Year > 2012)); // false
+            Console.WriteLine(myCars.TrueForAll(p => p.Year > 2007)); // true
+            */
+
+            /* Compact a foreach from 4 lines of code to 1
+            myCars.ForEach(p => p.StickerPrice -= 3000);  // take $3000 off the sticker price
+            myCars.ForEach(p => Console.WriteLine("{0} {1} {2:C}", p.VIN, p.Make, p.StickerPrice));
+            */
+
             Console.ReadLine();
         }
     }
