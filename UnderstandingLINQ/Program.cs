@@ -78,6 +78,29 @@ namespace UnderstandingLINQ
             myCars.ForEach(p => Console.WriteLine("{0} {1} {2:C}", p.VIN, p.Make, p.StickerPrice));
             */
 
+            /*
+            Console.WriteLine(myCars.Exists(p => p.Make == "Ford"));    // true
+            Console.WriteLine(myCars.Exists(p => p.Make == "Chevy"));   // false
+            
+            Console.WriteLine("{0:C}", myCars.Sum(p => p.StickerPrice));
+            */
+            /*
+            // Taking a look at how var works... by using .GetType() and seeing 
+            // that compiler figures out the type as it compiles
+            Console.WriteLine(myCars.GetType());
+
+            var orderedCars = myCars.OrderByDescending(p => p.Year);
+            Console.WriteLine(orderedCars.GetType());
+
+            var bmws = myCars.Where(p => p.Make == "BMW" && p.Year > 2008);
+            Console.WriteLine(bmws.GetType());
+
+            var newCars = from car in myCars
+                       where car.Make == "BMW"
+                       && car.Year > 2008
+                       select new { car.Make, car.Model };
+            Console.WriteLine(newCars.GetType());
+            */
             Console.ReadLine();
         }
     }
