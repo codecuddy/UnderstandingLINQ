@@ -24,20 +24,41 @@ namespace UnderstandingLINQ
                        where car.Make == "BMW"
                        && car.Year > 2008
                        select car;
-            */
-
-
-
-            // LINQ method
-
-            // var bmws = myCars.Where(p => p.Make == "BMW" && p.Year > 2008);
-
-
 
             foreach (var car in bmws)
             {
                 Console.WriteLine("{0} {1}", car.Model, car.VIN);
             }
+
+            */
+            /*
+            var orderedCars = from car in myCars
+                              orderby car.Year descending
+                              select car;
+
+            foreach (var car in orderedCars)
+            {
+                Console.WriteLine("{0} {1}", car.Year, car.VIN);
+            }
+            */
+
+            // LINQ method
+            /*
+            var bmws = myCars.Where(p => p.Make == "BMW" && p.Year > 2008);
+
+            foreach (var car in bmws)
+            {
+                Console.WriteLine("{0} {1}", car.Model, car.VIN);
+            }
+            */
+            /*
+            var orderedCars = myCars.OrderByDescending(p => p.Year);
+
+            foreach (var car in orderedCars)
+            {
+                Console.WriteLine("{0} {1}", car.Year, car.VIN);
+            }
+            */
 
             Console.ReadLine();
         }
