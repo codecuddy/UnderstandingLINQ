@@ -30,6 +30,7 @@ namespace UnderstandingLINQ
 
             // LINQ method
 
+            // var bmws = myCars.Where(p => p.Make == "BMW" && p.Year > 2008);
 
 
 
